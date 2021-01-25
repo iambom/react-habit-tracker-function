@@ -45,7 +45,10 @@ const App = () => {
     });
     setHabits(newHabits);
   }
-
+  const handleAdd = (name) => {
+    const newHabits = [... habits, {id:Date.now(), name, count : 0}];
+    setHabits(newHabits);
+  }
   const totalCount = habits.filter(item => item.count > 0).length;
   return (
     <>
@@ -56,6 +59,7 @@ const App = () => {
         onDecrement={handleDecrement}
         onDelete={handleDelete}
         onReset={handleReset}
+        onAdd={handleAdd}
       />
     </>
   )
