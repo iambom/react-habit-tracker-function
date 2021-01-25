@@ -1,6 +1,6 @@
-import React from 'react';
+import React, {memo} from 'react';
 
-const Habit = ({habit, onIncrement, onDecrement, onDelete}) => {
+const Habit = memo(({habit, onIncrement, onDecrement, onDelete}) => {
     const handleIncrement = () => {
         onIncrement(habit)
     }
@@ -22,6 +22,6 @@ const Habit = ({habit, onIncrement, onDecrement, onDelete}) => {
             </li>
         </>
     )
-}
+});
 
 export default Habit;

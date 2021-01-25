@@ -1,7 +1,7 @@
 import React, { memo } from 'react';
 
 const Form = memo(props => {
-    console.log(props)
+    
     const formRef = React.createRef();
     const inputRef = React.createRef();
 
